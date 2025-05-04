@@ -26,25 +26,31 @@ function getHumanChoice(){
 
 function playRound(humanChoice, computerChoice){
     if(humanChoice==="Rock" && computerChoice==="Scissors") {
-        return("You won! Rock beats Scissors")
+        humanScore ++;
+        return("You won! Rock beats Scissors" + "Score: " + (humanScore) + (" ") + (computerScore))
     }
     else if(humanChoice==="Paper" && computerChoice==="Rock"){
-        return("You won! Paper beats Rock")
+        humanScore ++;
+        return("You won! Paper beats Rock" + "Score: " + (humanScore) + (" ") + (computerScore))
     }
     else if(humanChoice==="Scissors" && computerChoice==="Paper"){
-        return("You won! Scissors beats Paper")
+        humanScore ++;
+        return("You won! Scissors beats Paper" + "Score: " + (humanScore) + (" ") + (computerScore))
     }
     else if(humanChoice==="Rock" && computerChoice==="Paper"){
-        return("You lost! Rock beats Paper")
+        computerScore ++;
+        return("You lost! Paper beats Rock" + "Score: " + (humanScore) + (" ") + (computerScore))
     }
     else if(humanChoice==="Paper" && computerChoice==="Scissors"){
-        return("You lost! Scissors beats Paper")
+        computerScore ++;
+        return("You lost! Scissors beats Paper" + "Score: " + (humanScore) + (" ") + (computerScore))
     }
     else if(humanChoice==="Scissors" && computerChoice==="Rock"){
-        return("You lost! Rock beats Scissors")
+        computerScore ++;
+        return("You lost! Rock beats Scissors" + "Score: " + (humanScore) + (" ") + (computerScore))
     }
     else{
-        return("It's a tie!")
+        return("It's a tie!" + "Score: " + (humanScore) + (" ") + (computerScore))
     }
 
 }
